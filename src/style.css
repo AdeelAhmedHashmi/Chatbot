@@ -1,0 +1,124 @@
+       *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+       }
+       body { font-family: Arial, sans-serif; text-align: center;
+          background-color:black}
+        .chat-box { width: 100vw; border: 1px solid transparent; padding: 10px; height: 100vh; overflow-y: auto;
+          box-shadow: 1px 1px 12px white;
+          background-color: #212121;
+          padding-top: 87px;
+          padding-bottom: 80px;
+        }
+        .head{
+          padding: 20px;
+          position: fixed;
+          top: 0;
+          width: 100vw;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          background-color: rgb(33, 33, 33,0.4);
+          color: #f2f2f2;
+          z-index: 2;
+        }
+        .head h1{
+          font-size: 26px;
+          text-shadow: 1px 8px 20px #ffffff55;
+        }
+        .head p{
+          font-size: 12px;
+        }
+        .user { color: white; text-align: right; 
+          background-color: #74747484;
+          padding: 10px;
+          position: relative;
+          width: 70%;
+          left: 29%;
+          border-radius: 10px 0px 10px 10px;
+          word-wrap: wrap;
+          text-wrap: wrap;
+          overflow-x: auto;
+        }
+        code{
+          word-wrap: wrap;
+          text-wrap: wrap;
+          font-style: bold;
+          padding: 2px;
+          margin-left: 4px;
+        }
+        ol,ul,dl{
+          list-style: none;
+        }
+        .bot strong, .bot h1,.bot h2, .bot h3, .bot h4{
+          margin: 8px 6px;
+        }
+        .bot { color: white; text-align: left;
+          background-color: transparent;
+          margin-top: 5px;
+          border-radius: 0px 10px 10px 10px;
+          line-height: 20px;
+          padding: 10px;
+          word-wrap: wrap;
+          text-overflow: none;
+        }
+        .bot *{
+          word-wrap: wrap;
+          margin: 13px 0px;
+        }
+        .btn{
+          display: flex;
+          padding: 10px 16px;
+          margin-top: 29px;
+          justify-content: center;
+          position: absolute;
+          bottom: 3px;
+          background-color: #313131;
+          width: 100vw;
+          border-radius: 30px;
+          box-shadow: 1px 1px 10px #f0f0f055;
+        }
+        input { width: 83%; padding: 0px; 
+        background-color: transparent; 
+        border: 2px solid transparent;
+        font-size: 16px;
+        color: white;
+          }
+          input:focus{
+            outline: none;
+          }
+        button { 
+        background-color: transparent;
+        border: none;
+        border-radius: 50px;
+        width: 37px;
+        padding-top: 6px;
+        font-size: 25px;
+        color: white;
+        margin-left: 5px;
+        }
+        .pop{
+          font-size: 20px;
+          color: white;
+          position: absolute;
+          top: 50vh;
+          left: 50vw;
+          transform: translate(-50%, -50%);
+          animation-name: appear;
+          animation-duration: 2s;
+          animation-iteration-count: 1;
+          animation-timing-function: ease;
+        }
+        @keyframes appear{
+          0%{
+            opacity: 0;
+          }
+          45%{
+            opacity: 1;
+          }
+          100%{
+            opacity: 0;
+          }
+        }
