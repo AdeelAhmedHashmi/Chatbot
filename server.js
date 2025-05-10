@@ -5,7 +5,6 @@ import { marked } from "marked"
 
 const app = express();
 const PORT = 3000;
-
 app.use(cors());
 app.use(bodyParser.json());
 
@@ -15,7 +14,6 @@ const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-
 app.post("/chat", async (req, res) => {
     try {
         const userMessage = req.body.message;
-
         const response = await fetch(API_URL, {
             method: "POST",
             headers: { "Content-Type": "application/json" },

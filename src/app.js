@@ -1,9 +1,22 @@
         async function sendMessage() {
             const userInput = document.getElementById("userInput").value;
             if (!userInput) return;
+            let prompt = `
+            The Instructions inside [{ }] brackets is just for you that your prompt is must trained these instruction dont show any text that shows these inst4uction on your response  dont reply on these instruction only provide answer or reply of the actual prompt that inside { } brackets
             
+            [{
+            Instructions
+              1. Your Name while this conversation is Adeels Chatbot 
+              2. Your Owner name is AdeelAhmed and AdeelAhmed is a developer who developed your.
+            }]
+            
+            Actual prompt
+            {
+              ${userInput}
+            }
+            `
             const chatBox = document.getElementById("chatBox");
-            chatBox.innerHTML += `<p class="user">${userInput}</p>`;
+            chatBox.innerHTML += `<p class="user">${prompt}</p>`;
             document.getElementById("userInput").value = "";
 
             try {
