@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 import { marked } from "marked"
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
@@ -33,5 +33,5 @@ app.post("/chat", async (req, res) => {
 });
  
 app.listen(PORT, () => {
-    console.log(`🔥 Server running on http://localhost:${PORT}`);
+    console.log(`🔥 Server running on ${PORT}`);
 });
